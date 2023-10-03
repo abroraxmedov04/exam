@@ -1,0 +1,108 @@
+.hero {
+    background-image:url(/assets/images/BG\ \(1\).png);
+    background-repeat:no-repeat;
+    background-position: top;
+    margin-top: 150px;
+
+  padding-bottom: 80px;
+
+  .hero_wr {
+    display: flex;
+    align-items: start;
+
+    .heri_title {
+      color: var(--black, #1d2530);
+      font-feature-settings: "salt" on, "liga" off;
+      font-family: Gilroy-ExtraBold;
+      font-size: 50px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 60px;
+      max-width: 383px;
+      width: 382.5px;
+
+      span {
+        color: #685ed6;
+        font-feature-settings: "salt" on, "liga" off;
+        font-family: Gilroy-ExtraBold;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 60px; /* 120% */
+      }
+    }
+
+    .hero-desc {
+      margin-top: 24px;
+      color: #1d2530;
+      font-family: Gilroy;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 34px; /* 141.667% */
+      max-width: 482px;
+      width: 100%;
+
+      span {
+        color: #685ed6;
+        font-family: Gilroy-Bold;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 34px;
+      }
+    }
+  }
+
+  .heru_btm {
+    margin-top: 32px;
+    padding: 12px 32px;
+    border: transparent;
+    border-radius: 6px;
+    background: #685ed6;
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.07);
+
+    color: #fff;
+    text-align: center;
+    font-feature-settings: "salt" on, "liga" off;
+    font-family: Gilroy-Bold;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 133.333% */
+    transition: 0.5s;
+  }
+
+  .heru_btm:hover {
+    background: #33afe1;
+  }
+
+  .heru_btm:active {
+    background: #18e1f7;
+  }
+
+  .hero__image {
+    display: block;
+    height: auto !important;
+    max-width: 725px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .hero_wr {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+  }
+
+  .hero_content {
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+}

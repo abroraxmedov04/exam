@@ -1,0 +1,17 @@
+// media
+$breakpoint-dasktop: 1440px;
+$breakpoint-table: 768px;
+$breakpoint-phone: 576px;
+
+@mixin table {
+  @media only screen and (max-width: $breakpoint-table) {
+    @content;
+  }
+}
+@mixin phone {
+  @media only screen and (max-width: $breakpoint-phone) {
+    @content;
+  }
+}
+
+// colors

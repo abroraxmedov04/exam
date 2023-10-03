@@ -1,0 +1,118 @@
+.rates {
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  .rates_title {
+    color: #1d2530;
+    text-align: center;
+    font-feature-settings: "salt" on, "liga" off;
+    font-family: Gilroy-ExtraBold;
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 64px; /* 139.13% */
+  }
+
+  .rates-body {
+    margin-top: 16px;
+    color: #1d2530;
+    font-feature-settings: "salt" on, "liga" off;
+    font-family: Gilroy;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px; /* 133.333% */
+    text-align: center;
+  }
+
+  .rates_wr::-webkit-scrollbar {
+    -webkit-appearance: none;
+  }
+  .rates_wr {
+    margin-top: 40px;
+    overflow-x: scroll;
+    display: flex;
+    gap: 30px;
+
+    .rates__card {
+      padding: 0 48px 50px 48px;
+      width: 350px;
+        height: 387px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 6px;
+      background: #fcfeff;
+      box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.07);
+
+      .rates_variations {
+        background: rgba(104, 94, 214, 0.05);
+        width: 350px;
+        height: 61px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        p {
+          color: #685ed6;
+          font-family: Gilroy-ExtraBold;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 800;
+          line-height: 48px; /* 200% */
+        }
+      }
+
+      .card_title {
+        margin-top: 40px;
+        color: #1d2530;
+        text-align: center;
+        font-family: Gilroy-Bold;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 40px; /* 142.857% */
+      }
+
+      .rates__price {
+        margin-top: 32px;
+        color: #1d2530;
+        text-align: center;
+        font-family: Gilroy-Medium;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 30px; /* 150% */
+      }
+    }
+  }
+
+  .card_btn {
+    margin-top: 46px;
+    border-radius: 6px;
+    padding: 12px 32px;
+
+    border: transparent;
+    background: #685ed6;
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.07);
+    color: var(--default-white, #fff);
+    text-align: center;
+    font-feature-settings: "salt" on, "liga" off;
+    font-family: Gilroy-Bold;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 133.333% */
+    transition: 0.5s;
+  }
+
+
+  .card_btn:hover {
+    background: #33afe1;
+  }
+
+  .card_btn:active {
+    background: #18e1f7;
+  }
+}

@@ -1,0 +1,117 @@
+.connecting_title {
+  color: var(--black, #1d2530);
+  font-feature-settings: "salt" on, "liga" off;
+  font-family: Gilroy-ExtraBold;
+  font-size: 46px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 64px;
+  text-align: center;
+}
+
+.connecting_wr::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+.connecting_wr {
+  background-image: url(/assets/icons/lines.svg);
+  background-repeat: no-repeat;
+  margin-top: 64px;
+  display: flex;
+  align-items: center;
+  gap: 178px;
+  margin-bottom: 128px;
+  overflow-x: scroll !important;
+
+  .connecting_card {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 227px;
+    gap: 16px;
+    // overflow-x: scroll;
+
+    h3 {
+      color: #1d2530;
+      text-align: center;
+      font-feature-settings: "salt" on, "liga" off;
+      font-family: Gilroy-ExtraBold;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 28px; /* 155.556% */
+    }
+
+    p {
+      color: #1d2530;
+      text-align: center;
+      font-feature-settings: "salt" on, "liga" off;
+      font-family: Gilroy;
+      font-size: 17px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 27px; /* 158.824% */
+    }
+
+    .c_circles {
+      width: 20px;
+      height: 20px;
+      border: radius 50%;
+    }
+  }
+
+  .card__image {
+    min-width: 205px;
+    width: 100%;
+  }
+  .circles {
+    margin: 0 auto;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: #f1e4ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p {
+      color: #685ed6;
+      text-align: center;
+      font-family: Gilroy;
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 30px;
+    }
+  }
+
+  .active__card {
+    margin-top: 80px;
+  }
+}
+
+// media
+
+@media (max-width: 1200px) {
+  .connecting_wr {
+    background-image: none !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .connecting_title {
+    font-size: 32px;
+    line-height: 39px;
+  }
+
+  .active__card {
+    margin-top: 0 !important;
+  }
+
+  .connecting_wr {
+    justify-content: center;
+    align-items: center;
+    overflow-x: scroll !important;
+    gap: 45px;
+  }
+}

@@ -1,0 +1,105 @@
+.navbar {
+  padding-top: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+
+    .nav__LogoText {
+      color: #1d2530;
+      font-family: Gilroy-Bold;
+      font-size: 28.111px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 21.083px;
+    }
+  }
+
+  .btn-keeper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    .btn {
+      padding: 10px 20px;
+      border: transparent;
+    }
+
+    .btn_first {
+      border-radius: 6px;
+      background: #f1e4ff;
+      box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.07);
+      color: #685ed6;
+      font-feature-settings: "salt" on, "clig" off, "liga" off;
+      font-family: Gilroy-Bold;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 20px; /* 125% */
+      transition: 0.3s;
+    }
+
+    .btn_first:hover {
+      background: #c39bfb;
+    }
+
+    .btn_first:active {
+      background: #685ed6;
+      color: #fff;
+      text-align: center;
+      font-feature-settings: "salt" on, "clig" off, "liga" off;
+      font-family: Gilroy;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 20px;
+      transition: 0.3s;
+    }
+
+    .btn-second {
+      border-radius: 6px;
+      background: #685ed6;
+      box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.07);
+
+      color: var(--default-white, #fff);
+      font-feature-settings: "salt" on, "clig" off, "liga" off;
+      font-family: Gilroy-Bold;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 20px;
+      transition: 0.3s;
+    }
+
+    .btn-second:hover {
+      background: #33afe1;
+    }
+
+    .btn-second:active {
+      background: #18e1f7;
+    }
+  }
+  .humburger {
+    display: none;
+  }
+  .hero__image img {
+    // position: absolute;
+    z-index: 999;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .btn-keeper {
+    display: none !important;
+  }
+  
+
+  .humburger {
+    display: block !important;
+  }
+}

@@ -1,0 +1,97 @@
+.online-tocha {
+  margin-top: 72px;
+}
+
+.online_wr {
+  padding-bottom: 76px;
+  display: flex;
+  align-items: center;
+  gap: 76px;
+
+  .online__content {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+
+    .online-title {
+      color: #1d2530;
+      font-family: Gilroy-ExtraBold;
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 32px;
+      max-width: 426px;
+      width: 100%;
+    }
+    .online_datas_image img {
+      width: 68px;
+      height: 58px;
+    }
+  }
+
+  .online_datas {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 26px;
+    max-width: 522px;
+    width: 100%;
+  }
+
+  .data_infos {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .datas-title {
+      color: #1d2530;
+      font-feature-settings: "salt" on, "liga" off;
+      font-family: Gilroy-Bold;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 32px; /* 133.333% */
+    }
+
+    .datas-paragraph {
+      color: #1d2530;
+      font-feature-settings: "salt" on, "liga" off;
+      font-family: Gilroy;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 26px; /* 162.5% */
+    }
+  }
+
+  .online__image img {
+    max-width: 411px;
+    // width: 100%;
+  }
+}
+@media (max-width: 900px) {
+  .online_wr {
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .online-title {
+    // text-align: center;
+    // max-width: 284px;
+    line-height: 40px; /* 125% */
+  }
+  .online_datas_image img {
+    width: 48px;
+    height: 48px;
+  }
+  .online__image {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 0 auto;
+  }
+  .online__image img {
+    width: 300px;
+  }
+}

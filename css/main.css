@@ -1,0 +1,961 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  width: 100% !important;
+}
+
+body {
+  background: rgba(242, 247, 255, 0.5);
+}
+
+@font-face {
+  font-family: Gilroy;
+  src: url(/assets/font/Gilroy-Regular.ttf);
+}
+@font-face {
+  font-family: Gilroy-Medium;
+  src: url(/assets/font/Gilroy-Medium.ttf);
+}
+@font-face {
+  font-family: Gilroy-SemiBold;
+  src: url(/assets/font/Gilroy-SemiBold.ttf);
+}
+@font-face {
+  font-family: Gilroy-Black;
+  src: url(/assets/font/Gilroy-Black.ttf);
+}
+@font-face {
+  font-family: Gilroy-Bold;
+  src: url(/assets/font/Gilroy-Bold.ttf);
+}
+@font-face {
+  font-family: Gilroy-ExtraBold;
+  src: url(/assets/font/Gilroy-ExtraBold.ttf);
+}
+@font-face {
+  font-family: Gilroy-Heavy;
+  src: url(/assets/font/Gilroy-Heavy.ttf);
+}
+@font-face {
+  font-family: "Inter", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+}
+body {
+  font-family: Gilroy;
+}
+
+.container {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.navbar {
+  padding-top: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.navbar .nav-logo .nav__LogoText {
+  color: #1d2530;
+  font-family: Gilroy-Bold;
+  font-size: 28.111px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 21.083px;
+}
+.navbar .btn-keeper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.navbar .btn-keeper .btn {
+  padding: 10px 20px;
+  border: transparent;
+}
+.navbar .btn-keeper .btn_first {
+  border-radius: 6px;
+  background: #f1e4ff;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.07);
+  color: #685ed6;
+  font-feature-settings: "salt" on, "clig" off, "liga" off;
+  font-family: Gilroy-Bold;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px; /* 125% */
+  transition: 0.3s;
+}
+.navbar .btn-keeper .btn_first:hover {
+  background: #c39bfb;
+}
+.navbar .btn-keeper .btn_first:active {
+  background: #685ed6;
+  color: #fff;
+  text-align: center;
+  font-feature-settings: "salt" on, "clig" off, "liga" off;
+  font-family: Gilroy;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  transition: 0.3s;
+}
+.navbar .btn-keeper .btn-second {
+  border-radius: 6px;
+  background: #685ed6;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.07);
+  color: var(--default-white, #fff);
+  font-feature-settings: "salt" on, "clig" off, "liga" off;
+  font-family: Gilroy-Bold;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  transition: 0.3s;
+}
+.navbar .btn-keeper .btn-second:hover {
+  background: #33afe1;
+}
+.navbar .btn-keeper .btn-second:active {
+  background: #18e1f7;
+}
+.navbar .humburger {
+  display: none;
+}
+.navbar .hero__image img {
+  z-index: 999;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .btn-keeper {
+    display: none !important;
+  }
+  .humburger {
+    display: block !important;
+  }
+}
+.hero {
+  background-image: url(/assets/images/BG\ \(1\).png);
+  background-repeat: no-repeat;
+  background-position: top;
+  margin-top: 150px;
+  padding-bottom: 80px;
+}
+.hero .hero_wr {
+  display: flex;
+  align-items: start;
+}
+.hero .hero_wr .heri_title {
+  color: var(--black, #1d2530);
+  font-feature-settings: "salt" on, "liga" off;
+  font-family: Gilroy-ExtraBold;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 60px;
+  max-width: 383px;
+  width: 382.5px;
+}
+.hero .hero_wr .heri_title span {
+  color: #685ed6;
+  font-feature-settings: "salt" on, "liga" off;
+  font-family: Gilroy-ExtraBold;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 60px; /* 120% */
+}
+.hero .hero_wr .hero-desc {
+  margin-top: 24px;
+  color: #1d2530;
+  font-family: Gilroy;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 34px; /* 141.667% */
+  max-width: 482px;
+  width: 100%;
+}
+.hero .hero_wr .hero-desc span {
+  color: #685ed6;
+  font-family: Gilroy-Bold;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 34px;
+}
+.hero .heru_btm {
+  margin-top: 32px;
+  padding: 12px 32px;
+  border: transparent;
+  border-radius: 6px;
+  background: #685ed6;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.07);
+  color: #fff;
+  text-align: center;
+  font-feature-settings: "salt" on, "liga" off;
+  font-family: Gilroy-Bold;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 133.333% */
+  transition: 0.5s;
+}
+.hero .heru_btm:hover {
+  background: #33afe1;
+}
+.hero .heru_btm:active {
+  background: #18e1f7;
+}
+.hero .hero__image {
+  display: block;
+  height: auto !important;
+  max-width: 725px;
+  width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  .hero_wr {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+  }
+  .hero_content {
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
+.online-tocha {
+  margin-top: 72px;
+}
+
+.online_wr {
+  padding-bottom: 76px;
+  display: flex;
+  align-items: center;
+  gap: 76px;
+}
+.online_wr .online__content {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.online_wr .online__content .online-title {
+  color: #1d2530;
+  font-family: Gilroy-ExtraBold;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 32px;
+  max-width: 426px;
+  width: 100%;
+}
+.online_wr .online__content .online_datas_image img {
+  width: 68px;
+  height: 58px;
+}
+.online_wr .online_datas {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 26px;
+  max-width: 522px;
+  width: 100%;
+}
+.online_wr .data_infos {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.online_wr .data_infos .datas-title {
+  color: #1d2530;
+  font-feature-settings: "salt" on, "liga" off;
+  font-family: Gilroy-Bold;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px; /* 133.333% */
+}
+.online_wr .data_infos .datas-paragraph {
+  color: #1d2530;
+  font-feature-settings: "salt" on, "liga" off;
+  font-family: Gilroy;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
+}
+.online_wr .online__image img {
+  max-width: 411px;
+}
+
+@media (max-width: 900px) {
+  .online_wr {
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+  }
+  .online-title {
+    line-height: 40px; /* 125% */
+  }
+  .online_datas_image img {
+    width: 48px;
+    height: 48px;
+  }
+  .online__image {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 0 auto;
+  }
+  .online__image img {
+    width: 300px;
+  }
+}
+.footer {
+  background: #1d2530;
+  padding: 104px 0;
+}
+.footer .footer_wr {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 126px;
+}
+.footer .footer__logo {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.footer .footer__logo p {
+  color: #fff;
+  font-family: Gilroy-Bold;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 75% */
+}
+.footer .footer_links {
+  display: flex;
+  gap: 126px;
+}
+.footer .footer_item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 216px;
+  width: 100%;
+}
+.footer .footer_links {
+  color: rgb(238, 239, 244);
+  font-feature-settings: "salt" on, "liga" off;
+  font-family: Gilroy;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+}
+.footer .activs {
+  color: #f4f5f7;
+  font-feature-settings: "salt" on, "liga" off;
+  font-family: Gilroy-Bold;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+.footer_copyright {
+  padding: 25px 0;
+  background: #141b23;
+}
+.footer_copyright .copyright {
+  color: #d9dbe1;
+  font-feature-settings: "salt" on, "liga" off;
+  font-family: Gilroy;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+@media (max-width: 768px) {
+  .footer_links {
+    display: flex;
+    gap: 45px !important;
+  }
+  .footer_wr {
+    gap: 60px;
+  }
+}
+@media (max-width: 576px) {
+  .footer_links {
+    flex-direction: column !important;
+  }
+}
+.community {
+  padding: 90px 0;
+}
+.community .comunity_wr {
+  padding: 30px;
+  background-image: url(/assets/icons/sub_futter_bg.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.community .com__content h2 {
+  color: #fff;
+  font-feature-settings: "salt" on, "liga" off;
+  font-family: Gilroy-ExtraBold;
+  font-size: 33px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 41px; /* 124.242% */
+  max-width: 445px;
+}
+.community form {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+}
+.community .input {
+  outline: none;
+  border-radius: 5px 0px 0px 5px;
+  background: #f4f5f7;
+  padding: 14px 16px;
+  border: transparent;
+  max-width: 248px;
+  width: 100%;
+}
+.community .inp-btn {
+  border: transparent;
+  padding: 11.5px 24px;
+  border-radius: 0px 5px 5px 0px;
+  background: #18191f;
+  color: #fff;
+  font-feature-settings: "salt" on, "clig" off, "liga" off;
+  font-family: Gilroy;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px; /* 142.857% */
+}
+
+@media (max-width: 765px) {
+  .com__content h2 {
+    line-height: 32px !important;
+  }
+}
+@media (max-width: 600px) {
+  .comunity_wr {
+    justify-content: center;
+    border-radius: 6px;
+    background: #685ed6;
+    background-image: none !important;
+    flex-direction: column;
+  }
+  .com__content h2 {
+    max-width: 280px !important;
+    width: 100% !important;
+    margin-top: 24px;
+  }
+}
+.comments .comments_title {
+  color: #1d2530;
+  font-feature-settings: "salt" on, "liga" off;
+  font-family: Gilroy-ExtraBold;
+  font-size: 46px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 64px;
+  text-align: center;
+}
+.comments .comments__wr::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+.comments .comments__wr {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 48px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+.comments .comments__wr .cards {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+.comments .comments__wr .cards .card_top {
+  width: 500px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 6px;
+  background: #fff;
+  padding: 32px 32px 56px 32px;
+}
+.comments .comments__wr .cards .card_top h3 {
+  color: #18191f;
+  text-align: center;
+  font-feature-settings: "salt" on, "liga" off;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+}
+.comments .comments__wr .cards .card_top p {
+  margin-top: 8px;
+  color: #18191f;
+  text-align: center;
+  font-feature-settings: "salt" on, "liga" off;
+  font-family: Gilroy;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  /* 171.429% */
+}
+.comments .profiles {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 28px;
+  gap: 16px;
+}
+.comments .profiles img {
+  display: block;
+  width: 56px;
+  height: 56px;
+}
+.comments .profiles ul {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.comments .profiles ul .p_name {
+  color: #1d2530;
+  font-feature-settings: "salt" on, "liga" off;
+  font-family: Gilroy-Bold;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+  /* 155.556% */
+}
+.comments .circles {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+.comments .circles .circle {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 3px solid #685ed6;
+  opacity: 0.5;
+}
+.comments .circles .circle::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #685ed6;
+  opacity: 0.5;
+  top: -2.5px;
+  left: 15px;
+}
+.comments .circles .circle::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #685ed6;
+  opacity: 0.5;
+  top: -2.5px;
+  right: 15px;
+}
+.comments .commebts-podition {
+  position: relative;
+  width: 143px;
+}
+.comments .commebts-podition img {
+  position: absolute;
+  top: -100px;
+  left: 850px;
+}
+.comments .wr-position {
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .comments_title {
+    font-size: 32px !important;
+  }
+}
+.connecting_title {
+  color: var(--black, #1d2530);
+  font-feature-settings: "salt" on, "liga" off;
+  font-family: Gilroy-ExtraBold;
+  font-size: 46px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 64px;
+  text-align: center;
+}
+
+.connecting_wr::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.connecting_wr {
+  background-image: url(/assets/icons/lines.svg);
+  background-repeat: no-repeat;
+  margin-top: 64px;
+  display: flex;
+  align-items: center;
+  gap: 178px;
+  margin-bottom: 128px;
+  overflow-x: scroll !important;
+}
+.connecting_wr .connecting_card {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 227px;
+  gap: 16px;
+}
+.connecting_wr .connecting_card h3 {
+  color: #1d2530;
+  text-align: center;
+  font-feature-settings: "salt" on, "liga" off;
+  font-family: Gilroy-ExtraBold;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px; /* 155.556% */
+}
+.connecting_wr .connecting_card p {
+  color: #1d2530;
+  text-align: center;
+  font-feature-settings: "salt" on, "liga" off;
+  font-family: Gilroy;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px; /* 158.824% */
+}
+.connecting_wr .connecting_card .c_circles {
+  width: 20px;
+  height: 20px;
+  border: radius 50%;
+}
+.connecting_wr .card__image {
+  min-width: 205px;
+  width: 100%;
+}
+.connecting_wr .circles {
+  margin: 0 auto;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #f1e4ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.connecting_wr .circles p {
+  color: #685ed6;
+  text-align: center;
+  font-family: Gilroy;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+}
+.connecting_wr .active__card {
+  margin-top: 80px;
+}
+
+@media (max-width: 1200px) {
+  .connecting_wr {
+    background-image: none !important;
+  }
+}
+@media (max-width: 1200px) {
+  .connecting_title {
+    font-size: 32px;
+    line-height: 39px;
+  }
+  .active__card {
+    margin-top: 0 !important;
+  }
+  .connecting_wr {
+    justify-content: center;
+    align-items: center;
+    overflow-x: scroll !important;
+    gap: 45px;
+  }
+}
+.rates {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.rates .rates_title {
+  color: #1d2530;
+  text-align: center;
+  font-feature-settings: "salt" on, "liga" off;
+  font-family: Gilroy-ExtraBold;
+  font-size: 46px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 64px; /* 139.13% */
+}
+.rates .rates-body {
+  margin-top: 16px;
+  color: #1d2530;
+  font-feature-settings: "salt" on, "liga" off;
+  font-family: Gilroy;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px; /* 133.333% */
+  text-align: center;
+}
+.rates .rates_wr::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+.rates .rates_wr {
+  margin-top: 40px;
+  overflow-x: scroll;
+  display: flex;
+  gap: 30px;
+}
+.rates .rates_wr .rates__card {
+  padding: 0 48px 50px 48px;
+  width: 350px;
+  height: 387px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background: #fcfeff;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.07);
+}
+.rates .rates_wr .rates__card .rates_variations {
+  background: rgba(104, 94, 214, 0.05);
+  width: 350px;
+  height: 61px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rates .rates_wr .rates__card .rates_variations p {
+  color: #685ed6;
+  font-family: Gilroy-ExtraBold;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 48px; /* 200% */
+}
+.rates .rates_wr .rates__card .card_title {
+  margin-top: 40px;
+  color: #1d2530;
+  text-align: center;
+  font-family: Gilroy-Bold;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px; /* 142.857% */
+}
+.rates .rates_wr .rates__card .rates__price {
+  margin-top: 32px;
+  color: #1d2530;
+  text-align: center;
+  font-family: Gilroy-Medium;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px; /* 150% */
+}
+.rates .card_btn {
+  margin-top: 46px;
+  border-radius: 6px;
+  padding: 12px 32px;
+  border: transparent;
+  background: #685ed6;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.07);
+  color: var(--default-white, #fff);
+  text-align: center;
+  font-feature-settings: "salt" on, "liga" off;
+  font-family: Gilroy-Bold;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 133.333% */
+  transition: 0.5s;
+}
+.rates .card_btn:hover {
+  background: #33afe1;
+}
+.rates .card_btn:active {
+  background: #18e1f7;
+}
+
+/*# sourceMappingURL=main.css.map */
